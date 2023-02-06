@@ -44,6 +44,7 @@ namespace monogame
                 Exit();
 
             // TODO: Add your update logic here
+            player.Update();
 
             base.Update(gameTime);
         }
@@ -53,6 +54,11 @@ namespace monogame
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+            _spriteBatch.Begin();
+
+            player.Draw(_spriteBatch);
+
+            _spriteBatch.End();
 
             base.Draw(gameTime);
         }
