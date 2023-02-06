@@ -24,7 +24,17 @@ namespace monogame.Classes
 
         public void LoadContent(ContentManager manager)
         {
+            texture = manager.Load<Texture2D>("Player");
+        }
 
+        public void Update()
+        {
+            position.Y -= 1;
+        }
+
+        public void Draw(SpriteBatch spriteBatch)
+        {
+            spriteBatch.Draw(texture, position, Color.White);
         }
     }
 }
